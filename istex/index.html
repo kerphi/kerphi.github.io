@@ -51,7 +51,7 @@
               Ces objets documentaires sont le plus souvant des articles et dans le cas des ebook
               nous y trouverons des chapitres.
             </p>
-            <p><a href="https://api.istex.fr/document/?q=*&size=0&sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
+            <p><a href="https://api.istex.fr/document/?q=*&amp;size=0&amp;sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
 
@@ -97,13 +97,13 @@
           <div class="fdb-box fdb-touch">
             <h2 id="istex-nb-doc-fr">130 000</h2>
             <script>
-            $.get('https://api.istex.fr/document/?q=* AND language.raw:("fre")&size=0').then(function (res) {
+            $.get('https://api.istex.fr/document/?q=* AND language.raw:("fre")&size=0&sid=istex-www').then(function (res) {
               var nb = res.total.toLocaleString('fr', {useGrouping:true});
               $('#istex-nb-doc-fr').text(nb);
             });
             </script>            
             <p>Nombre de documents présents dans la plateformes ISTEX en langue Française.</p>
-            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(fre)&amp;size=0">Plus d'information sur la source de ce chiffre</a></p>
+            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(fre)&amp;size=0&amp;sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
 
@@ -112,13 +112,13 @@
           <div class="fdb-box fdb-touch">
             <h2 id="istex-nb-doc-en">16 000 000</h2>
             <script>
-            $.get('https://api.istex.fr/document/?q=* AND language.raw:("eng")&size=0').then(function (res) {
+            $.get('https://api.istex.fr/document/?q=* AND language.raw:("eng")&size=0&sid=istex-www').then(function (res) {
               var nb = res.total.toLocaleString('fr', {useGrouping:true});
               $('#istex-nb-doc-en').text(nb);
             });
             </script>            
             <p>Nombre de documents présents dans la plateformes ISTEX en langue Anglaise.</p>
-            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(eng)&amp;size=0">Plus d'information sur la source de ce chiffre</a></p>
+            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(eng)&amp;size=0&amp;sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
 
