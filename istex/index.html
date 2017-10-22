@@ -27,7 +27,11 @@
         <div class="col text-center">
           <img src="https://content-delivery.istex.fr/web-header/public/img/logo-istex-anr.png" alt="" />
           <h1>Chiffres ISTEX dynamiques</h1>
-          <p>Cette page illustre comment récupérer de façon dynamique différents chiffres ISTEX.<br/> Les sources de ces données sont <a href="https://api.istex.fr">api.istex.fr</a> et <a href="https://data.istex.fr">data.istex.fr</a>.</p>
+          <p>
+            Cette page illustre comment récupérer de façon dynamique différents chiffres clé ISTEX.<br/>
+            Les sources de ces données sont <a href="https://api.istex.fr">api.istex.fr</a>
+            et <a href="https://data.istex.fr">data.istex.fr</a>.
+          </p>
         </div>
       </div>      
 
@@ -59,8 +63,12 @@
               $('#istex-nb-docs').text(nb);
             });
             </script>
-            <p>Nombre d'objets documentaires présents dans la plateforme ISTEX. Ces objets documentaires sont le plus souvant des articles mais dans le cas des ebook, nous y trouverons des chapitres.</p>
-            <p><a href="https://api.istex.fr/document/?q=*&size=0&sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
+            <p>
+              Nombre d'objets documentaires présents dans la plateforme ISTEX.
+              Ces objets documentaires sont le plus souvant des articles et dans le cas des ebook
+              nous y trouverons des chapitres.
+            </p>
+            <p><a href="https://api.istex.fr/document/?q=*&amp;size=0&amp;sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
 
@@ -73,7 +81,11 @@
               $('#istex-nb-org').text(nb);
             });
             </script>
-            <p>Nombre d'organisations de l'ESR ayant droit ISTEX. Ces organisation correspondent à la liste déclarée auprès de l'ABES suite à leur <a href="https://acces.licencesnationales.fr/">inscription</a>.</p>
+            <p>
+              Nombre d'établissements de l'ESR ayant droit ISTEX.
+              Ces établissements se sont déclarés auprès de l'ABES
+              depuis le <a href="https://acces.licencesnationales.fr/">formulaire d'inscription</a>.
+            </p>
             <p><a href="https://organization-list.data.istex.fr/api/publishedDataset?perPage=1">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
@@ -102,13 +114,13 @@
           <div class="fdb-box fdb-touch">
             <h2 id="istex-nb-doc-fr">130 000</h2>
             <script>
-            $.get('https://api.istex.fr/document/?q=* AND language.raw:("fre")&size=0').then(function (res) {
+            $.get('https://api.istex.fr/document/?q=* AND language.raw:("fre")&size=0&sid=istex-www').then(function (res) {
               var nb = res.total.toLocaleString('fr', {useGrouping:true});
               $('#istex-nb-doc-fr').text(nb);
             });
             </script>            
             <p>Nombre de documents présents dans la plateformes ISTEX en langue Française.</p>
-            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(fre)&amp;size=0">Plus d'information sur la source de ce chiffre</a></p>
+            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(fre)&amp;size=0&amp;sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
 
@@ -117,13 +129,13 @@
           <div class="fdb-box fdb-touch">
             <h2 id="istex-nb-doc-en">16 000 000</h2>
             <script>
-            $.get('https://api.istex.fr/document/?q=* AND language.raw:("eng")&size=0').then(function (res) {
+            $.get('https://api.istex.fr/document/?q=* AND language.raw:("eng")&size=0&sid=istex-www').then(function (res) {
               var nb = res.total.toLocaleString('fr', {useGrouping:true});
               $('#istex-nb-doc-en').text(nb);
             });
             </script>            
             <p>Nombre de documents présents dans la plateformes ISTEX en langue Anglaise.</p>
-            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(eng)&amp;size=0">Plus d'information sur la source de ce chiffre</a></p>
+            <p><a href="https://api.istex.fr/document/?q=* AND language.raw:(eng)&amp;size=0&amp;sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
 
@@ -136,7 +148,10 @@
               $('#istex-nb-doc-ra').text(nb);
             });
             </script>            
-            <p>Nombre de documents de type <strong>article de recherche</strong> (research-article) présents dans la plateformes ISTEX.</p>
+            <p>
+              Nombre de documents de type <strong>article de recherche</strong> (research-article)
+              présents dans la plateformes ISTEX.
+            </p>
             <p><a href="https://api.istex.fr/document/?q=*%20AND%20genre.raw:(%22research-article%22)&size=0&sid=istex-www">Plus d'information sur la source de ce chiffre</a></p>
           </div>
         </div>
