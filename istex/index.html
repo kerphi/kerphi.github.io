@@ -193,7 +193,7 @@
           return decodeURIComponent(results[2].replace(/\+/g, " "));
       }    
       var istexConfig = {
-        query: getParameterByName('q')
+        query: getParameterByName('q') ? getParameterByName('q') : false,
       };
   </script>  
   <script src="//widgets.istex.fr/bower_components/angular/angular.min.js"></script>
