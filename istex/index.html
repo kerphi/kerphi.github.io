@@ -21,6 +21,10 @@
 
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+
+  <link rel="stylesheet" href="//widgets.istex.fr/slider/rzslider.css" />
+  <link rel="stylesheet" href="//widgets.istex.fr/styleAngular/style.min.css" />
+
 </head>
 <body>
 
@@ -163,6 +167,38 @@
       </div>
     </div>
   </section>
+
+
+  <section class="fdb-block">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <istex-search></istex-search>
+        </div>
+      </div>      
+      <div class="row">
+        <div class="col text-center">
+          <istex-results></istex-results>
+        </div>
+      </div>      
+  </section>
+  <script>
+      function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }    
+      var istexConfig = {
+        query: getParameterByName('q')
+      };
+  </script>  
+  <script src="//widgets.istex.fr/bower_components/angular/angular.min.js"></script>
+  <script src="//widgets.istex.fr/slider/rzslider.js"></script>
+  <script src="//widgets.istex.fr/app.min.js"></script>
 
 </body>
 </html>
